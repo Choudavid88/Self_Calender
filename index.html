@@ -1,0 +1,67 @@
+<html>
+<title> Calender Events </title>
+<head>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+var event, date, description;
+var arr=[];
+var entry = {};
+
+$(document).ready(function() {
+
+$("#create").click(function() {
+ entry.event = $('#event').val();
+ entry.date =  $('#date').val();
+ entry.description =  $('#description').val();
+ 
+ arr.push({entry: entry});
+// entry.push({event: event, date: date, description: description});
+// arr.push(entry);
+ 
+ console.log("The Event is: " + event);
+ console.log("The Date is: " + date);
+ console.log("The Description is: " + description);
+ console.log("object is:" + JSON.stringify(arr));
+});
+	
+});
+
+//spinich & eggs benedict
+ </script>
+
+</head>
+
+
+
+<body>
+
+<div> 
+<center><span>test</span></center> <!-- Title Line -->
+</div>
+<hr>
+
+<center> 
+	<form>
+Event Name: <br>
+<input type="text" id="event"> <br>
+
+Date: <br>
+<input type="text" id="date"> <br>
+
+Description: <br>
+<textarea id="description" rows="3" cols="20"> </textarea><br>
+
+</form>
+</center>
+
+<div>
+<center><input type="button" id="create" value="Add Event"></button></center> <!-- Event Button -->
+</div>
+
+<div>
+
+</div>
+
+</body>
+
+</html>
